@@ -1,0 +1,145 @@
+.education {
+  padding: 60px 10px;
+  background-color: #fff;
+  
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e1e24;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1rem; /* 🟢 adds space between cards */
+}
+
+/* ===== CARD STYLING ===== */
+.card {
+  flex: 1 1 calc(25% - 2rem); /* 4 cards per row */
+  max-width: 350px;
+  min-width: 250px;
+  background-color: beige;
+  padding: 25px 10px 15px 15px;
+  margin: 10px; /* 🟢 small outer spacing for cleaner layout */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  width: 343px;
+}
+
+.card:hover {
+  background-color: #1e1e24;
+  color: white;
+  transform: scale(1.05);
+  z-index: 99;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.building-img {
+  margin-bottom: 15px;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.building-img:hover {
+  filter: brightness(0) invert(1);
+}
+
+/* ===== TEXT STYLES ===== */
+.qualification {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.year {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(75, 75, 75);
+}
+
+.edu-name {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.Grade {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large tablets (2 cards per row) */
+@media (max-width: 1024px) {
+  .row {
+    gap: 1.5rem;
+  }
+
+  .card {
+    flex: 1 1 calc(45% - 1.5rem);
+    max-width: 400px;
+  }
+}
+
+/* Tablets (1 card per row) */
+@media (max-width: 768px) {
+  .education {
+    padding: 40px 30px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Mobile (1 card per row, small text) */
+@media (max-width: 480px) {
+  .education {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .qualification {
+    font-size: 1.2rem;
+  }
+
+  .year,
+  .Grade,
+  .edu-name {
+    font-size: 0.95rem;
+  }
+
+  .building-img {
+    width: 60px;
+    height: 60px;
+  }
+}

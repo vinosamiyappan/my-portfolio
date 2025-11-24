@@ -1,0 +1,178 @@
+.about {
+  margin: 160px 200px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Profile header (image + text) */
+.about-info {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.img-about img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info-text {
+  position: relative;
+  bottom: -7px;
+}
+
+.info-text p {
+  color: #1e1e2495;
+  font-size: 15px;
+}
+
+.info-text h5 {
+  margin-bottom: 4px;
+}
+
+.about h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #1e1e24;
+}
+
+/* About main layout */
+.about-info2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* makes it responsive */
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 80px;
+  min-width: 280px;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #1e1e24;
+  line-height: 1.6;
+}
+
+.about-text span {
+  color: #ffcc00;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+/* Photo container */
+.photo-container {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.photo-container img {
+  width: 260px;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Tape decorations */
+.tape {
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  background: linear-gradient(145deg, #111 0%, #222 40%, #000 100%);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.6),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.tape1 {
+  top: -18px;
+  left: 25px;
+  transform: rotate(-10deg);
+}
+
+.tape2 {
+  bottom: -18px;
+  right: 25px;
+  transform: rotate(10deg);
+}
+
+/* ---------------------- */
+/* Responsive Design */
+/* ---------------------- */
+
+@media (max-width: 1024px) {
+  .about {
+    margin: 120px 100px;
+  }
+
+  .about-text {
+    margin-right: 40px;
+  }
+
+  .photo-container img {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    margin: 100px 50px;
+  }
+
+  .about-info2 {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-text {
+    margin: 0;
+  }
+
+  .photo-container {
+    margin: 0 auto 30px auto;
+  }
+
+  .photo-container img {
+    width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    margin: 80px 20px;
+  }
+
+  .about-info {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .img-about img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about h3 {
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  .photo-container img {
+    width: 200px;
+  }
+}

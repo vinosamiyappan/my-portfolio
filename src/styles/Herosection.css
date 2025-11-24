@@ -1,0 +1,25 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 101vh;
+  overflow: hidden;
+}
+
+/* 🎬 Background video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* must stay behind header and home */
+  pointer-events: none; /* ✅ crucial: allows clicks through video */
+  opacity: 0.9;
+}
+
+/* Make sure header and home content appear above */
+.hero-section > * {
+  position: relative;
+  z-index: 5;
+}
